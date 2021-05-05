@@ -1,0 +1,2 @@
+- How to find the current usage number. If it is the last add, i want to enforce equals.
+Sol. Create two level of non-terminals.

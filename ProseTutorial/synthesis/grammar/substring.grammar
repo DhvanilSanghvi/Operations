@@ -8,49 +8,10 @@ language Substring;
 
 @input List<int> v;
 
-@start int pro1 := 
-    AddFinal(v, pro2, pro2) | 
-    MulFinal(v, pro3, pro3) |
-    DivFinal(v, pro4, pro4) |
-    ElementFinal(v, k);
-
-int pro2 := 
-    Mul(v, pro5, pro5) |
-    Div(v, pro6, pro6) |
-    Element(v, k);
-
-int pro3 := 
-    Add(v, pro7, pro7) | 
-    Div(v, pro8, pro8) |
-    Element(v, k);
-
-unit? pro4 := 
-    Add(v, pro9, pro9) | 
-    Mul(v, pro10, pro10) |
-    Element(v, k);
-
-int pro5 :=
-    Div(v, k, k) |
-    Element(v, k);
-
-int pro6 :=
-    Mul(v, k, k) |
-    Element(v, k);
-
-int pro7 :=
-    Div(v, k, k) |
-    Element(v, k);
-
-int pro8 :=
-    Add(v, k, k) | 
-    Element(v, k);
-
-int pro9 := 
-    Mul(v, k, k) |
-    Element(v, k);
-
-int pro10 :=
-    Add(v, k, k) | 
+@start int pro2 := 
+    Add(v, @recurse[7] pro2, @recurse[7] pro2) | 
+    Mul(v, @recurse[7] pro2, @recurse[7] pro2) |
+    Div(v, @recurse[7] pro2, @recurse[7] pro2) |
     Element(v, k);
 
 int k; 
