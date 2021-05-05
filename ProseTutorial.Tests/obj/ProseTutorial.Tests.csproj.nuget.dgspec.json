@@ -1,0 +1,154 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj": {}
+  },
+  "projects": {
+    "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj",
+        "projectName": "ProseTutorial.Tests",
+        "projectPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj",
+        "packagesPath": "C:\\Users\\Skit\\.nuget\\packages\\",
+        "outputPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Skit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj": {
+                "projectPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[1.1.18, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[1.1.18, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.3.0-preview-20170628-02, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.ProgramSynthesis": {
+              "target": "Package",
+              "version": "[7.30.0, )"
+            },
+            "Microsoft.ProgramSynthesis.Compiler": {
+              "target": "Package",
+              "version": "[7.30.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj",
+        "projectName": "ProseTutorial",
+        "projectPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj",
+        "packagesPath": "C:\\Users\\Skit\\.nuget\\packages\\",
+        "outputPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Skit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.ProgramSynthesis": {
+              "target": "Package",
+              "version": "[7.30.0, )"
+            },
+            "Microsoft.ProgramSynthesis.Compiler": {
+              "target": "Package",
+              "version": "[7.30.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
