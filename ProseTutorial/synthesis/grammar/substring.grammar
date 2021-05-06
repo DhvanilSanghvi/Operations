@@ -6,9 +6,9 @@ language Substring;
 
 @complete feature double Score = ProseTutorial.RankingScore;
 
-@input List<int> v;
+@input List<uint?> v;
 
-@start int pro2 := 
+@start uint? pro2 := 
     Add(v, @recurse[7] pro2, @recurse[7] pro2) | 
     Mul(v, @recurse[7] pro2, @recurse[7] pro2) |
     Div(v, @recurse[7] pro2, @recurse[7] pro2) |

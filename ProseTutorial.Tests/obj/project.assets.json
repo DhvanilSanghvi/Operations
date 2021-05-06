@@ -8362,11 +8362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj",
+      "projectUniqueName": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj",
       "projectName": "ProseTutorial.Tests",
-      "projectPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj",
+      "projectPath": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial.Tests\\ProseTutorial.Tests.csproj",
       "packagesPath": "C:\\Users\\Skit\\.nuget\\packages\\",
-      "outputPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial.Tests\\obj\\",
+      "outputPath": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Skit\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8383,8 +8383,8 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "projectReferences": {
-            "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj": {
-              "projectPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj"
+            "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial\\ProseTutorial.csproj": {
+              "projectPath": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial\\ProseTutorial.csproj"
             }
           }
         }

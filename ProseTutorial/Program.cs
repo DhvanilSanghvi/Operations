@@ -84,27 +84,33 @@ namespace ProseTutorial
                 string input = Console.ReadLine();
                 if (input != null)
                 {
-                    List<int> inputList = new List<int>();
+                    List<uint?> inputList = new List<uint?>();
                     string temp = string.Empty;
                     int startList = input.IndexOf('[');
                     int endList = input.IndexOf(']');
                     string listString = input.Substring(startList, endList-startList+1);
-                    
-                    for(int i=0; i<listString.Length; i++){
-                        if(listString[i] == ',' || listString == ']'){
+                    Console.Out.Write("here");
+
+                    for(int i=1; i<listString.Length; i++){
+                        Console.Out.Write("here\n");
+                        if(listString[i].Equals(',') || listString[i].Equals(']')){
                             // Save temp string as number
-                            inputList.Add(int.Parse(temp));
+                            inputList.Add(UInt32.Parse(temp));
                             // Make temp string as empty
                             temp = string.Empty;
+                            Console.Out.Write("here1\n");
                         }
                         else{
                             // Append to the temp string
                             temp = temp + listString[i];
+                            Console.Out.Write("here2\n");
                         }
                     }
+                    Console.Out.Write("here");
 
-                    int expectedOutput = int.Parse(input.Substring(endList+2));
+                    uint? expectedOutput = UInt32.Parse(input.Substring(endList+2));
                     State inputState = State.CreateForExecution(Grammar.InputSymbol, inputList);
+                    Console.Out.Write("here");
                     Examples.Add(inputState, expectedOutput);
 
                     // if (startFirstExample >= endFirstExample || startSecondExample >= endSecondExample)

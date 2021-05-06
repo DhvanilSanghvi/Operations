@@ -7000,11 +7000,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj",
+      "projectUniqueName": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial\\ProseTutorial.csproj",
       "projectName": "ProseTutorial",
-      "projectPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj",
+      "projectPath": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial\\ProseTutorial.csproj",
       "packagesPath": "C:\\Users\\Skit\\.nuget\\packages\\",
-      "outputPath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\obj\\",
+      "outputPath": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Skit\\AppData\\Roaming\\NuGet\\NuGet.Config",

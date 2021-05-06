@@ -1,55 +1,17 @@
 ﻿using semantics ProseTutorial.Semantics;
 using learners ProseTutorial.WitnessFunctions;
+using System;
 
 language Substring;
 
 @complete feature double Score = ProseTutorial.RankingScore;
 
-@input Dictionary<uint?,uint?> v;
+@input List<uint?> v;
 
-@start unit? pro1 := 
-    Add(v, pro2, pro2) | 
-    Mul(v, pro3, pro3) |
-    Div(v, pro4, pro4) |
-    Element(v, k);
-
-uint? pro2 := 
-    Mul(v, pro5, pro5) |
-    Div(v, pro6, pro6) |
-    Element(v, k);
-
-uint? pro3 := 
-    Add(v, pro7, pro7) | 
-    Div(v, pro8, pro8) |
-    Element(v, k);
-
-unit? pro4 := 
-    Add(v, pro9, pro9) | 
-    Mul(v, pro10, pro10) |
-    Element(v, k);
-
-uint? pro5 :=
-    Div(v, k, k) |
-    Element(v, k);
-
-uint? pro6 :=
-    Mul(v, k, k) |
-    Element(v, k);
-
-uint? pro7 :=
-    Div(v, k, k) |
-    Element(v, k);
-
-uint? pro8 :=
-    Add(v, k, k) | 
-    Element(v, k);
-
-uint? pro9 := 
-    Mul(v, k, k) |
-    Element(v, k);
-
-uint? pro10 :=
-    Add(v, k, k) | 
+@start uint? pro2 := 
+    Add(v, @recurse[7] pro2, @recurse[7] pro2) | 
+    Mul(v, @recurse[7] pro2, @recurse[7] pro2) |
+    Div(v, @recurse[7] pro2, @recurse[7] pro2) |
     Element(v, k);
 
 int k; 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "snhfRjtFhkClB9qdmd/9ci9Mas10Q1ubPhH3RKFbK9wVAc0Lfx70ZNQONs32nPyV0X1RXbJ2xmCXI37NXcOa4w==",
+  "dgSpecHash": "FGVymUj1h3J42715Z1XNghVRIfw0WqdX6LTehQR8yqghiuaAKJ7+KRBsuaCusxJjpmFfi8j6X9tRYdh+BUaX8w==",
   "success": true,
-  "projectFilePath": "D:\\Acads\\MSR Arun Iyer\\ass2\\prose\\dsl-samples\\tutorial\\part1a\\ProseTutorial\\ProseTutorial.csproj",
+  "projectFilePath": "D:\\Acads\\MSR Arun Iyer\\operations\\part1a\\ProseTutorial\\ProseTutorial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Skit\\.nuget\\packages\\anglesharp\\0.9.10\\anglesharp.0.9.10.nupkg.sha512",
     "C:\\Users\\Skit\\.nuget\\packages\\antlr4\\4.6.4\\antlr4.4.6.4.nupkg.sha512",

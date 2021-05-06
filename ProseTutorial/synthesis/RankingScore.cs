@@ -15,53 +15,39 @@ namespace ProseTutorial
             return 0;
         }
 
-        [FeatureCalculator(nameof(Semantics.AddFinal))]
-        public static double AddFinal(double v, double start, double end)
-        {
-            return start + end;
-        }
-
         [FeatureCalculator(nameof(Semantics.Add))]
         public static double Add(double v, double start, double end)
         {
-            return start + end;
+            if(start + end == 0)    return 1;
+            return 1/(start + end);
         }
 
         
-        [FeatureCalculator(nameof(Semantics.MulFinal))]
-        public static double MulFinal(double v, double start, double end)
-        {
-            return start * end;
-        }
 
         [FeatureCalculator(nameof(Semantics.Mul))]
         public static double Mul(double v, double start, double end)
         {
-            return start * end;
-        }
-
-        [FeatureCalculator(nameof(Semantics.DivFinal))]
-        public static double DivFinal(double v, double start, double end)
-        {
-            return start * end;
+            if(start * end == 0)    return 1;
+            return 0.1/(start * end);
         }
 
         [FeatureCalculator(nameof(Semantics.Div))]
         public static double Div(double v, double start, double end)
         {
-            return start * end;
+            if(start * end == 0)    return 1;
+            return 0.1/(start * end);
         }
 
         [FeatureCalculator(nameof(Semantics.Element))]
         public static double Element(double v, double k)
         {
-            return 0;
+            return 1;
         }
 
-        [FeatureCalculator(nameof(Semantics.ElementFinal))]
-        public static double ElementFinal(double v, double k)
+        [FeatureCalculator("k", Method = CalculationMethod.FromLiteral)]
+        public static double K(int k)
         {
-            return 0;
+            return k;
         }
     }
 }

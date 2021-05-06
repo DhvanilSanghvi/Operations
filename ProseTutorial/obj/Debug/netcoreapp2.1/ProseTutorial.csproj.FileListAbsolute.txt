@@ -10,3 +10,16 @@ D:\Acads\MSR Arun Iyer\ass2\prose\dsl-samples\tutorial\part1a\ProseTutorial\obj\
 D:\Acads\MSR Arun Iyer\ass2\prose\dsl-samples\tutorial\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.dll
 D:\Acads\MSR Arun Iyer\ass2\prose\dsl-samples\tutorial\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.pdb
 D:\Acads\MSR Arun Iyer\ass2\prose\dsl-samples\tutorial\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.genruntimeconfig.cache
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.AssemblyInfoInputs.cache
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.AssemblyInfo.cs
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.csproj.CoreCompileInputs.cache
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.dll
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.pdb
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\bin\Debug\netcoreapp2.1\synthesis\grammar\substring.grammar
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\bin\Debug\netcoreapp2.1\ProseTutorial.deps.json
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\bin\Debug\netcoreapp2.1\ProseTutorial.runtimeconfig.json
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\bin\Debug\netcoreapp2.1\ProseTutorial.runtimeconfig.dev.json
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\bin\Debug\netcoreapp2.1\ProseTutorial.dll
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\bin\Debug\netcoreapp2.1\ProseTutorial.pdb
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.genruntimeconfig.cache
+D:\Acads\MSR Arun Iyer\operations\part1a\ProseTutorial\obj\Debug\netcoreapp2.1\ProseTutorial.csprojAssemblyReference.cache
