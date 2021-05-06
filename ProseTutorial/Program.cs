@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +10,7 @@ using Microsoft.ProgramSynthesis.Compiler;
 using Microsoft.ProgramSynthesis.Learning;
 using Microsoft.ProgramSynthesis.Learning.Strategies;
 using Microsoft.ProgramSynthesis.Specifications;
-using Microsoft.ProgramSynthesis.VersionSpace;
+using Microsoft.ProgramSynthesis.VersionSpace; 
 
 namespace ProseTutorial
 {
@@ -77,27 +78,45 @@ namespace ProseTutorial
 
         private static void LearnFromNewExample()
         {
-            Console.Out.Write("Provide a new input-output example (e.g., \"(Sumit Gulwani)\",\"Gulwani\"): ");
+            Console.Out.Write("Provide a new input-output example (e.g., [1,2,3,4],7 ) : ");
             try
             {
                 string input = Console.ReadLine();
                 if (input != null)
                 {
-                    int startFirstExample = input.IndexOf("\"", StringComparison.Ordinal) + 1;
-                    int endFirstExample = input.IndexOf("\"", startFirstExample + 1, StringComparison.Ordinal) + 1;
-                    int startSecondExample = input.IndexOf("\"", endFirstExample + 1, StringComparison.Ordinal) + 1;
-                    int endSecondExample = input.IndexOf("\"", startSecondExample + 1, StringComparison.Ordinal) + 1;
+                    List<int> inputList = new List<int>();
+                    string temp = string.Empty;
+                    int startList = input.IndexOf('[');
+                    int endList = input.IndexOf(']');
+                    string listString = input.Substring(startList, endList-startList+1);
+                    
+                    for(int i=0; i<listString.Length; i++){
+                        if(listString[i] == ',' || listString == ']'){
+                            // Save temp string as number
+                            inputList.Add(int.Parse(temp));
+                            // Make temp string as empty
+                            temp = string.Empty;
+                        }
+                        else{
+                            // Append to the temp string
+                            temp = temp + listString[i];
+                        }
+                    }
 
-                    if (startFirstExample >= endFirstExample || startSecondExample >= endSecondExample)
-                        throw new Exception(
-                            "Invalid example format. Please try again. input and out should be between quotes");
+                    int expectedOutput = int.Parse(input.Substring(endList+2));
+                    State inputState = State.CreateForExecution(Grammar.InputSymbol, inputList);
+                    Examples.Add(inputState, expectedOutput);
 
-                    string inputExample = input.Substring(startFirstExample, endFirstExample - startFirstExample - 1);
-                    string outputExample =
-                        input.Substring(startSecondExample, endSecondExample - startSecondExample - 1);
+                    // if (startFirstExample >= endFirstExample || startSecondExample >= endSecondExample)
+                    //     throw new Exception(
+                    //         "Invalid example format. Please try again. input and out should be between quotes");
 
-                    State inputState = State.CreateForExecution(Grammar.InputSymbol, inputExample);
-                    Examples.Add(inputState, outputExample);
+                    // string inputExample = input.Substring(startFirstExample, endFirstExample - startFirstExample - 1);
+                    // string outputExample =
+                    //     input.Substring(startSecondExample, endSecondExample - startSecondExample - 1);
+
+                    // State inputState = State.CreateForExecution(Grammar.InputSymbol, inputExample);
+                    // Examples.Add(inputState, outputExample);
                 }
             }
             catch (Exception)

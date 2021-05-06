@@ -58,6 +58,6 @@ namespace ProseTutorial
                 result[inputState] = occurrences.Cast<object>();
             }
             return new ExampleSpec(result);
-        }
+        } 
     }
 }
