@@ -89,28 +89,28 @@ namespace ProseTutorial
                     int startList = input.IndexOf('[');
                     int endList = input.IndexOf(']');
                     string listString = input.Substring(startList, endList-startList+1);
-                    Console.Out.Write("here");
+                    // Console.Out.Write("here");
 
                     for(int i=1; i<listString.Length; i++){
-                        Console.Out.Write("here\n");
+                        // Console.Out.Write("here\n");
                         if(listString[i].Equals(',') || listString[i].Equals(']')){
                             // Save temp string as number
                             inputList.Add(UInt32.Parse(temp));
                             // Make temp string as empty
                             temp = string.Empty;
-                            Console.Out.Write("here1\n");
+                            // Console.Out.Write("here1\n");
                         }
                         else{
                             // Append to the temp string
                             temp = temp + listString[i];
-                            Console.Out.Write("here2\n");
+                            // Console.Out.Write("here2\n");
                         }
                     }
-                    Console.Out.Write("here");
+                    // Console.Out.Write("here");
 
                     uint? expectedOutput = UInt32.Parse(input.Substring(endList+2));
                     State inputState = State.CreateForExecution(Grammar.InputSymbol, inputList);
-                    Console.Out.Write("here");
+                    // Console.Out.Write("here");
                     Examples.Add(inputState, expectedOutput);
 
                     // if (startFirstExample >= endFirstExample || startSecondExample >= endSecondExample)

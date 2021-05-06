@@ -143,7 +143,7 @@ namespace ProseTutorial
                     if(input[i] == 0)   continue;
                     if(firstNum % input[i] != 0)    continue;
                     if(firstNum/input[i] == output){
-                        if(input[i]!=1){ 
+                        if(input[i]!=1 && input[i] != output){ 
                             result[inputState] = input[i];
                             break;
                         }
