@@ -125,12 +125,16 @@ namespace ProseTutorial
                 var input = (List<uint?>) inputState[rule.Body[0]];
                 var output = (uint?)example.Value;
                 var occurrences = new List<uint?>();
-                for (int i=0; i<input.Count; i++) {
-                    if(input[i] >= output){
-                        if(input[i]!=1)
-                            occurrences.Add(input[i]);
-                    }
+                // for (int i=0; i<input.Count; i++) {
+                //     if(input[i] >= output){
+                //         if(input[i]!=1)
+                //             occurrences.Add(input[i]);
+                //     }
+                // }
+                for(uint? i=output+1; i<10*output; i++){
+                    occurrences.Add((uint)i);
                 }
+
                 if (occurrences.Count == 0) return null;
                 result[inputState] = occurrences.Cast<object>();
             }
