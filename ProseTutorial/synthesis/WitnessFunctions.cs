@@ -26,10 +26,13 @@ namespace ProseTutorial
                 var input = (List<uint?>) inputState[rule.Body[0]];
                 var output = (uint?)example.Value;
                 var occurrences = new List<uint?>();
-                for (int i=0; i<input.Count; i++) {
-                    if(input[i] <= output){
-                        occurrences.Add(input[i]);
-                    }
+                // for (int i=0; i<input.Count; i++) {
+                //     if(input[i] <= output){
+                //         occurrences.Add(input[i]);
+                //     }
+                // }
+                for(uint i=1; i<output; i++){
+                    occurrences.Add(i);
                 }
                 if (occurrences.Count == 0) return null;
                 result[inputState] = occurrences.Cast<object>();
@@ -49,12 +52,13 @@ namespace ProseTutorial
                 var output = (uint?)example.Value;
                 var firstNum = (uint?)startSpec.Examples[inputState];
 
-                for (int i=0; i<input.Count; i++) {
-                    if(input[i] + firstNum == output){
-                        result[inputState] = input[i];
-                        break;
-                    }
-                }
+                // for (int i=0; i<input.Count; i++) {
+                //     if(input[i] + firstNum == output){
+                //         result[inputState] = input[i];
+                //         break;
+                //     }
+                // }
+                result[inputState] = output-firstNum;
             }
             return new ExampleSpec(result);
         }
@@ -69,11 +73,14 @@ namespace ProseTutorial
                 var input = (List<uint?>) inputState[rule.Body[0]];
                 var output = (uint?)example.Value;
                 var occurrences = new List<uint?>();
-                for (int i=0; i<input.Count; i++) {
-                    if(input[i] <= output){
-                        if(input[i]!=1)
-                            occurrences.Add(input[i]);
-                    }
+                // for (int i=0; i<input.Count; i++) {
+                //     if(input[i] <= output){
+                //         if(input[i]!=1)
+                //             occurrences.Add(input[i]);
+                //     }
+                // }
+                for(uint i=1; i<output; i++){
+                    occurrences.Add(i);
                 }
                 if (occurrences.Count == 0) return null;
                 result[inputState] = occurrences.Cast<object>();
@@ -93,13 +100,16 @@ namespace ProseTutorial
                 var output = (uint?)example.Value;
                 var firstNum = (uint?)startSpec.Examples[inputState];
 
-                for (int i=0; i<input.Count; i++) {
-                    if(input[i]*firstNum == output){
-                        if(input[i] != 1){
-                            result[inputState] = input[i];
-                            break;
-                        }
-                    }
+                // for (int i=0; i<input.Count; i++) {
+                //     if(input[i]*firstNum == output){
+                //         if(input[i] != 1){
+                //             result[inputState] = input[i];
+                //             break;
+                //         }
+                //     }
+                // }
+                if(output%firstNum == 0){
+                    result[inputState] = output/firstNum;
                 }
             }
             return new ExampleSpec(result);
