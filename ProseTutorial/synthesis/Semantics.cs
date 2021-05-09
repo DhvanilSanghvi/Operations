@@ -10,7 +10,7 @@ namespace ProseTutorial
     {
         public static uint? Add(List<uint?> v, uint? op1, uint? op2)
         {
-            return (uint?)op1+op2;
+            return op1+op2;
         }
 
         public static uint? Mul(List<uint?> v, uint? op1, uint? op2)

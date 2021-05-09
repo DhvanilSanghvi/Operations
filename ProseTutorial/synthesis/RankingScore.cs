@@ -41,14 +41,14 @@ namespace ProseTutorial
         [FeatureCalculator(nameof(Semantics.Element))]
         public static double Element(double v, double k)
         {
-            return 0;
+            return 1;
         }
 
         [FeatureCalculator("k", Method = CalculationMethod.FromLiteral)]
         public static double K(int k)
         {
             if(k == 0){
-                return 0;
+                return 1;
             }
             return 1/k;
         }

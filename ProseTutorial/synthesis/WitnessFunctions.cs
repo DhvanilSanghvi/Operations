@@ -16,7 +16,7 @@ namespace ProseTutorial
         {
         }
 
-        [WitnessFunction(nameof(Semantics.Add), 1, Verify=true)]
+        [WitnessFunction(nameof(Semantics.Add), 1 )]
         public DisjunctiveExamplesSpec WitnessStartPositionAdd(GrammarRule rule, ExampleSpec spec)
         {
             var result = new Dictionary<State, IEnumerable<object>>();
@@ -38,7 +38,7 @@ namespace ProseTutorial
         }
 
         
-        [WitnessFunction(nameof(Semantics.Add), 2, Verify = true, DependsOnParameters = new[] {1})]
+        [WitnessFunction(nameof(Semantics.Add), 2, DependsOnParameters = new[] {1})]
         public ExampleSpec WitnessEndPositionAdd(GrammarRule rule, ExampleSpec spec, ExampleSpec startSpec)
         {
             var result = new Dictionary<State, object>();
@@ -59,7 +59,7 @@ namespace ProseTutorial
             return new ExampleSpec(result);
         }
 
-        [WitnessFunction(nameof(Semantics.Mul), 1, Verify=true)]
+        [WitnessFunction(nameof(Semantics.Mul), 1 )]
         public DisjunctiveExamplesSpec WitnessStartPositionMul(GrammarRule rule, ExampleSpec spec)
         {
             var result = new Dictionary<State, IEnumerable<object>>();
@@ -82,7 +82,7 @@ namespace ProseTutorial
         }
 
         
-        [WitnessFunction(nameof(Semantics.Mul), 2, Verify = true, DependsOnParameters = new[] {1})]
+        [WitnessFunction(nameof(Semantics.Mul), 2, DependsOnParameters = new[] {1})]
         public ExampleSpec WitnessEndPositionMul(GrammarRule rule, ExampleSpec spec, ExampleSpec startSpec)
         {
             var result = new Dictionary<State, object>();
@@ -105,7 +105,7 @@ namespace ProseTutorial
             return new ExampleSpec(result);
         }
 
-        [WitnessFunction(nameof(Semantics.Div), 1, Verify=true)]
+        [WitnessFunction(nameof(Semantics.Div), 1 )]
         public DisjunctiveExamplesSpec WitnessStartPositionDiv(GrammarRule rule, ExampleSpec spec)
         {
             var result = new Dictionary<State, IEnumerable<object>>();
@@ -128,7 +128,7 @@ namespace ProseTutorial
         }
 
         
-        [WitnessFunction(nameof(Semantics.Div), 2, Verify = true, DependsOnParameters = new[] {1})]
+        [WitnessFunction(nameof(Semantics.Div), 2, DependsOnParameters = new[] {1})]
         public ExampleSpec WitnessEndPositionDiv(GrammarRule rule, ExampleSpec spec, ExampleSpec startSpec)
         {
             var result = new Dictionary<State, object>();
@@ -141,7 +141,7 @@ namespace ProseTutorial
 
                 for (int i=0; i<input.Count; i++) {
                     if(input[i] == 0)   continue;
-                    if(firstNum % input[i] != 0)    continue;
+                    if(firstNum < input[i] || firstNum % input[i] != 0)    continue;
                     if(firstNum/input[i] == output){
                         if(input[i]!=1 && input[i] != output){ 
                             result[inputState] = input[i];

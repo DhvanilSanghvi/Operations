@@ -132,8 +132,15 @@ namespace ProseTutorial
 
             var spec = new ExampleSpec(Examples);
             Console.Out.WriteLine("Learning a program for examples:");
-            foreach (KeyValuePair<State, object> example in Examples)
-                Console.WriteLine("\"{0}\" -> \"{1}\"", example.Key.Bindings.First().Value, example.Value);
+            foreach (KeyValuePair<State, object> example in Examples){
+                List<uint?> l = (List<uint?>) example.Key.Bindings.First().Value;
+                Console.Write("[");
+                foreach(uint a in l){
+                    Console.Write("{0},", a);
+                }
+                Console.Write("]");
+                Console.Write(" -> {0}\n", example.Value);
+            }
 
             var scoreFeature = new RankingScore(Grammar);
             ProgramSet topPrograms = _prose.LearnGrammarTopK(spec, scoreFeature, 4, null);
