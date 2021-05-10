@@ -34,7 +34,7 @@ namespace ProseTutorial
         [FeatureCalculator(nameof(Semantics.Div))]
         public static double Div(double v, double start, double end)
         {
-            if(start * end == 0)    return 1;
+            if(start * end == 0)    return 1; 
             return 1/(start * end);
         }
 
