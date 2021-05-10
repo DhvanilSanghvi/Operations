@@ -79,7 +79,7 @@ namespace ProseTutorial
                 //             occurrences.Add(input[i]);
                 //     }
                 // }
-                for(uint i=1; i<output; i++){
+                for(uint i=1+1; i<output; i++){
                     occurrences.Add(i);
                 }
                 if (occurrences.Count == 0) return null;
