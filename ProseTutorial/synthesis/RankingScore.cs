@@ -17,13 +17,14 @@ namespace ProseTutorial
 
         // static doesnt work because, we cannot reference it by "this"
         // Documentation not in Ranking but in "Features"
-        
+
         [FeatureCalculator(nameof(Semantics.Add), Method = CalculationMethod.FromChildrenNodes)]
         public double Add(VariableNode v, ProgramNode start, ProgramNode end) 
         {
             double score = (double) start.GetFeatureValue(this) + (double) end.GetFeatureValue(this);
-            if(score == 0)    return 1;
-            return 1/score;
+            // if(score == 0)    return 1;
+            // return 1/score;
+            return score/10;
         }
 
         
@@ -38,9 +39,10 @@ namespace ProseTutorial
         [FeatureCalculator(nameof(Semantics.Mul), Method = CalculationMethod.FromChildrenNodes)]
         public double Mul(VariableNode v, ProgramNode start, ProgramNode end) 
         {
-            double score = (double) start.GetFeatureValue(this) * (double) end.GetFeatureValue(this);
-            if(score == 0)    return 1;
-            return 1/score;
+            double score = (double) start.GetFeatureValue(this) + (double) end.GetFeatureValue(this);
+            // if(score == 0)    return 1;
+            // return 1/score;
+            return score/10;
         }
 
         // [FeatureCalculator(nameof(Semantics.Div))]
@@ -53,9 +55,10 @@ namespace ProseTutorial
         [FeatureCalculator(nameof(Semantics.Div), Method = CalculationMethod.FromChildrenNodes)]
         public double Div(VariableNode v, ProgramNode start, ProgramNode end) 
         {
-            double score = (double) start.GetFeatureValue(this) * (double) end.GetFeatureValue(this);
-            if(score == 0)    return 1;
-            return 1/score;
+            double score = (double) start.GetFeatureValue(this) + (double) end.GetFeatureValue(this);
+            // if(score == 0)    return 1;
+            // return 1/score;
+            return score/10;
         }
 
         [FeatureCalculator(nameof(Semantics.Element))]

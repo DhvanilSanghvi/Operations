@@ -135,9 +135,14 @@ namespace ProseTutorial
             foreach (KeyValuePair<State, object> example in Examples){
                 List<uint?> l = (List<uint?>) example.Key.Bindings.First().Value;
                 Console.Write("[");
-                foreach(uint a in l){
-                    Console.Write("{0},", a);
+                int len = l.Count;
+                // foreach(uint a in l){
+                //     Console.Write("{0},", a);
+                // }
+                for(int j=0; j<len-1; j++){
+                    Console.Write("{0},", l[j]);
                 }
+                Console.Write("{0}", l[len-1]);
                 Console.Write("]");
                 Console.Write(" -> {0}\n", example.Value);
             }
