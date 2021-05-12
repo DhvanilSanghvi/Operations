@@ -1,4 +1,5 @@
 # Performing Arithmetic Operations using Program Synthesis
+This repository tests the use of program synthesis to generate programs using simple arithmetic operations.
 
 ## Features:
 1. Takes a variable length list and a target number as input.
